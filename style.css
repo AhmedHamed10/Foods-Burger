@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruluko&display=swap');
+
+:root{
+    --main-color: #ff702a;
+    --bg-color: #1e1c2a;
+    /* --big-font: 5rem;
+    --h2-font: 2.25rem;
+    --p-font: 0.9rem; */
+}
+
+* {
+    font-family: 'Ruluko', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+}
+
+.btn {
+    text-decoration: none;
+    color: #1e1c2a;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: .4s ease-in-out;
+}
+.btn:hover{
+    background: transparent;
+    color: #fff;
+}
+
+h4{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+section{
+    margin: 4rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+}
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.navbar a{
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.4s;
+    position: relative;
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transform: scale(0);
+    transition: 0.5s ease;
+    transform-origin: left;
+}
+
+.navbar a:hover::after {
+    transform: scale(1);
+}
+
+.icons i{
+    font-size: 2.4rem;
+    color: #fff;
+    margin: 0 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.icons i:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+.search-form{
+    width: 50rem;
+    height: 5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: absolute;
+    top: 4%; right: -200%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.search-form.active {
+    right: 2rem;
+}
+
+.search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    outline: none;
+    border: none;
+}
+
+.search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search-form  label:hover{
+    color: var(--main-color);
+}
+
+.home, .about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.home .title-home h2{
+    font-size: 6rem;
+    color: var(--main-color);
+    font-weight: 600;
+    line-height: 2;
+    font-family: sans-serif;
+}
+
+.home .title-home p {
+    font-size: 3.3rem;
+    color: #fff;
+    letter-spacing: .3rem;
+    margin-bottom: 2rem;
+}
+
+.home .home-img, .img-about{
+    width: 30%;
+}
+
+.home .home-img img, .img-about img{
+    width: 100%;
+}
+
+hr{
+    display: none;
+}
+
+.about, .menu, .services{
+    margin-top: 10rem;
+}
+
+.about .title-about {
+    width: 41%;
+}
+
+.about .title-about h2{
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    line-height: 1.3;
+}
+
+.about .title-about p{
+    color: #eee;
+    opacity: .6;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: .5rem 0;
+    margin: 2rem 0;
+}
+
+.menu h4, .services h4{
+    text-align: center;
+}
+
+.menu h2, .services h2{
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.menu-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu .card{
+    flex-basis: 30rem;
+    height: 30rem;
+    background-color: #fff;
+    border: 1px solid var(--main-color);
+    border-radius: .5rem;
+    margin: 3rem;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu .card:hover{
+    background-color: #ffffffa9;
+}
+
+.menu .card img{
+    width: 15rem;
+    position: absolute;
+    transform: translateX(50%);
+    top: 1rem;
+    right: 50%;
+}
+
+.menu .card i{
+    position: absolute;
+    right: 0rem;
+    background-color: var(--main-color);
+    padding: 4px;
+    font-size: 2.4rem;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu .card i:hover{
+    background: transparent;
+    color: var(--main-color);
+}
+
+.title-menu{
+    color: #000;
+    text-align: center;
+    transform: translateY(17rem);
+}
+.title-menu h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.title-menu h4{
+    color: #000;
+    margin: 1rem 0;
+}
+
+.title-menu p{
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.ser-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.s-box{
+    flex-basis: 20rem;
+    height: 100%;
+    text-align: center;
+    margin: 2rem 6rem;
+}
+
+.s-box img{
+    width: 10rem;
+}
+
+.s-box h3{
+    color: var(--main-color);
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.s-box p{
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.con-container{
+    text-align: center;
+    background-color: #fff;
+    margin: 13rem 10rem;
+    padding: 5rem 0;
+    border-radius: .5rem;
+}
+
+.con-container h2{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 5rem;
+}
+
+.con-container .btn:hover{
+    color: #ff702a;
+}
+
+.footer{
+    margin: 2rem 15rem;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: var(--main-color);
+}
+
+.footer a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 1rem 0;
+    transition: 0.3s ease;
+}
+
+.footer a:hover{
+    color: var(--main-color);
+}
+
+.footer .contact-us a{
+    display: inline-block;
+    margin: 2rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+        scroll-padding-top: 5rem;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 3%;
+        right: -200%;
+        background: #fff;
+        width: 100%;
+        height: calc(60vh - 12.5rem);
+        transition: .4s linear;
+    } 
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .navbar a::after{
+        background: transparent;
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    
+}
+
+
+
+@media (max-width: 768px){
+    .header{
+        padding: 2rem;
+    }
+    .home .title-home h2 {
+        font-size: 5rem;
+    }
+    .home .title-home p {
+        font-size: 2.2rem;
+    }
+    .about .title-about h2{
+        font-size: 2rem;
+    }
+    .footer{
+        margin: 2rem 8rem;
+    }
+}
+
+
+@media (max-width: 600px){
+    html{
+        font-size: 50%;
+        scroll-padding-top: 5rem;
+    }
+    .footer{
+        margin: 2rem;
+    }
+}
+
+
+@media (max-width: 456px){
+    html{
+        scroll-padding-top: 5rem;
+    }
+    .title-about{
+        width: 80%;
+    }
+    .home .title-home h2 {
+        font-size: 6rem;
+    }
+    .home .title-home p {
+        font-size: 2rem;
+    }
+    hr{
+        display: block;
+        margin-top: 9rem;
+        opacity: 0.2;
+    }    
+    .home-img, .img-about {
+        display: none;
+    }
+    .about .title-about {
+        width: 80%;
+    }
+    .about .title-about h2{
+        font-size: 2.2rem;
+    }
+    .footer h3{
+        font-size: 2rem;
+    }
+}
